@@ -1,0 +1,215 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Root.master.cs" Inherits="SJManagementWebApplication.Root" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server" enableviewstate="false">
+    <meta charset="UTF-8" />
+    <title></title>
+    <meta http-equiv="Page-Exit" content="Alpha(opacity=100)" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0" />
+    <!-- jQUery Latest Ver -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <!-- jQUery UI -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="https://nowonbun.github.io/Loader/dialog.js"></script>
+
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script type="text/javascript" src='<%# ResolveUrl("~/Content/Script.js") %>'></script>
+    <link rel="stylesheet" type="text/css" href='<%# ResolveUrl("~/Content/StyleSheet.css") %>' />
+    <asp:ContentPlaceHolder ID="Head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<script type="text/javascript"> //<![CDATA[ 
+
+</script>
+<body>
+    <form id="form1" runat="server" class="form" defaultbutton="btnNull">
+        <div style="display:none;">
+            <asp:Button ID="btnNull" runat="server" OnClientClick="return false" />
+        </div>
+        <div class="backPopup" id="backPopup">
+            <div class="loading-box" id="thick">
+                <div class="img-text">
+                    <div class="img"></div>
+                    <div class="text" style="font-size: 12px; font-weight: bold;">데이터를 불러오고 있습니다...</div>
+                    <div class="dialog"></div>
+                </div>
+            </div>
+        </div>
+        <div class="content-wrapper">
+            <!--헤더 부분-->
+            <dx:ASPxPanel runat="server" ID="HeaderPanel" ClientInstanceName="headerPanel" FixedPosition="WindowTop"
+                FixedPositionOverlap="true" CssClass="app-header" Height="140px">
+                <PanelCollection>
+                    <dx:PanelContent runat="server">
+                        <div class="left-block">
+                            <dx:ASPxMenu runat="server" ID="LeftAreaMenu" ClientInstanceName="leftAreaMenu"
+                                ItemAutoWidth="false" ItemWrap="false" SeparatorWidth="0" EnableHotTrack="false"
+                                Width="100%" CssClass="header-menu" SyncSelectionMode="None" SubMenuItemStyle-Wrap="False">
+                                <ItemStyle VerticalAlign="Middle" CssClass="item" />
+                                <Items>
+                                    <%--회사 로고 부분--%>
+                                    <dx:MenuItem Text="" ItemStyle-CssClass="image-item vertically-aligned" NavigateUrl="~/">
+                                        <Image SpriteProperties-CssClass="header-logo">
+                                            <SpriteProperties CssClass="header-logo"></SpriteProperties>
+                                        </Image>
+                                        <ItemStyle CssClass="image-item vertically-aligned" Width="120" Height="100">
+                                            <Paddings Padding="0" PaddingLeft="40" PaddingRight="15" />
+                                        </ItemStyle>
+                                    </dx:MenuItem>
+                                </Items>
+                            </dx:ASPxMenu>
+                        </div>
+
+                        <div class="left-block" id="headerText">
+                            <dx:ASPxMenu runat="server" ID="ASPxMenu1" ClientInstanceName="leftAreaMenu"
+                                ItemAutoWidth="false" ItemWrap="false" SeparatorWidth="0" EnableHotTrack="false"
+                                Width="100%" CssClass="header-menu" SyncSelectionMode="None" SubMenuItemStyle-Wrap="False">
+                                <ItemStyle VerticalAlign="Middle" CssClass="item" />
+                                <Items>
+                                    <dx:MenuItem Text="SJ Tech 시설 관리" ItemStyle-CssClass="headerLogo">
+                                        <ItemStyle>
+                                            <Paddings Padding="0" />
+                                        </ItemStyle>
+                                    </dx:MenuItem>
+                                    <dx:MenuItem Text="프로그램" ItemStyle-CssClass="headerLogo3">
+                                        <ItemStyle>
+                                            <Paddings Padding="0" PaddingRight="5" />
+                                        </ItemStyle>
+                                    </dx:MenuItem>
+                                    <dx:MenuItem Text="SJ Tech Facility management Program" ItemStyle-CssClass="headerLogo2">
+                                        <ItemStyle>
+                                            <Paddings Padding="0" PaddingTop="15" />
+                                        </ItemStyle>
+                                    </dx:MenuItem>
+                                </Items>
+                            </dx:ASPxMenu>
+                        </div>
+                        <div class="right-block">
+                            <dx:ASPxMenu runat="server" ID="RightAreaMenu" ClientInstanceName="rightAreaMenu"
+                                ItemAutoWidth="false" ItemWrap="false" ShowPopOutImages="False"
+                                SeparatorWidth="0" ApplyItemStyleToTemplates="true"
+                                Width="100%" CssClass="header-menu" OnItemClick="RightAreaMenu_ItemClick">
+                                <ItemStyle VerticalAlign="Middle" CssClass="item" />
+                                <SubMenuItemStyle CssClass="item" />
+                                <Items>
+                                    <dx:MenuItem Name="AccountItem" ItemStyle-CssClass="image-item">
+                                        <ItemStyle CssClass="image-item" Width="65" Height="100">
+                                            <Paddings Padding="0" PaddingRight="25" />
+                                            <BackgroundImage ImageUrl="Content/icon/hearder_alarm_Gray.png" Repeat="NoRepeat" VerticalPosition="center" HorizontalPosition="center" />
+                                        </ItemStyle>
+                                        <TextTemplate>
+                                            <div class="account-background">
+                                                <div runat="server" id="AccountImage" class="empty-image" />
+                                            </div>
+                                        </TextTemplate>
+                                    </dx:MenuItem>
+                                    <dx:MenuItem Name="ChatItem" ItemStyle-CssClass="image-item">
+                                        <ItemStyle CssClass="image-item" Width="65" Height="100">
+                                            <Paddings Padding="0" PaddingRight="25" />
+                                            <BackgroundImage ImageUrl="Content/icon/header_chat_Gray.png" Repeat="NoRepeat" VerticalPosition="center" HorizontalPosition="center" />
+                                        </ItemStyle>
+                                        <TextTemplate>
+                                            <div class="account-background">
+                                                <div runat="server" id="ChatImage" class="ChatImage" />
+                                            </div>
+                                        </TextTemplate>
+                                    </dx:MenuItem>
+                                    <dx:MenuItem Name="UserItem" ItemStyle-CssClass="image-item">
+                                        <ItemStyle CssClass="image-item" Width="65" Height="100">
+                                            <Paddings Padding="0" PaddingRight="40" />
+                                            <BackgroundImage ImageUrl="Content/icon/header_profile_gray.png" Repeat="NoRepeat" VerticalPosition="center" HorizontalPosition="center" />
+                                        </ItemStyle>
+                                        <TextTemplate>
+                                            <div class="account-background">
+                                                <div runat="server" id="UserImage" class="UserImage" />
+                                            </div>
+                                        </TextTemplate>
+                                        <Items>
+                                            <dx:MenuItem Name="UserInfoItem">
+                                                <TextTemplate>
+                                                    <div>
+                                                        <dx:ASPxLabel ID="userNameLabel" runat="server"></dx:ASPxLabel>
+                                                    </div>
+                                                </TextTemplate>
+                                            </dx:MenuItem>
+                                            <%--로그아웃 후 로그인 화면으로 이동--%>
+                                            <dx:MenuItem Name="SignOutItem" Text="로그아웃" Image-Url="Content/icon/sign-out.svg" Image-Height="16px">
+                                                <Image Height="16px" Url="Content/icon/sign-out.svg"></Image>
+                                            </dx:MenuItem>
+                                        </Items>
+                                    </dx:MenuItem>
+                                </Items>
+                            </dx:ASPxMenu>
+                        </div>
+                        <div class="dx-clear"></div>
+
+                        <dx:ASPxButton ID="menuBtn" CssClass="menuBtn"  ClientInstanceName="menuBtn" runat="server" OnClick="menuBtn_Click" Image-Url="~/Content/icon/button_hambuger_deepblue.svg" BackgroundImage-Repeat="NoRepeat"  ><%-- ClientSideEvents-Click="menuBtnClick" --%>
+                            
+                        </dx:ASPxButton>
+                        <div class="mainMenu" id="mainMenu" runat="server">
+                            <dx:ASPxMenu runat="server" ID="mMenu"
+                                ItemAutoWidth="false" ItemWrap="false" SeparatorWidth="0" EnableHotTrack="true"
+                                OnItemClick="mMenu_ItemClick"
+                                Width="100%" CssClass="main-menu" SyncSelectionMode="None">
+                                <ItemStyle>
+                                    <Paddings PaddingTop="15" />
+
+                                    <HoverStyle BackColor="#005B99">
+                                    </HoverStyle>
+                                </ItemStyle>
+                            </dx:ASPxMenu>
+                        </div>
+                    </dx:PanelContent>
+                </PanelCollection>
+            </dx:ASPxPanel>
+            <%--왼쪽 메뉴--%>
+            <dx:ASPxPanel runat="server" ID="LeftPanel" ClientInstanceName="leftPanel"
+                ScrollBars="Auto" FixedPosition="WindowLeft" Width="250px"
+                Collapsible="false" CssClass="left-panel" Paddings-Padding="0" Styles-ExpandBar-CssClass="expand-bar" BackColor="#f2f2f2">
+                <Paddings PaddingTop="20" PaddingLeft="10" />
+                <SettingsCollapsing ExpandButton-Visible="false" ExpandEffect="PopupToRight" AnimationType="Slide" Modal="true" />
+                <PanelCollection>
+                    <dx:PanelContent>
+                        <dx:ASPxTreeView ID="treeView" AllowSelectNode="false" SyncSelectionMode="CurrentPath" EnableHotTrack="true" ClientInstanceName="treeViewContainer"
+                            EnableNodeTextWrapping="true" Width="220"
+                            CssClass="leftMenu" runat="server">
+                            <Styles Node-HoverStyle-CssClass="hoverNode" Node-CssClass="node" Node-SelectedStyle-CssClass="selectedNode">
+                            </Styles>
+                            <Images>
+                                <CollapseButton Url="Content/icon/icon_pageup.svg" Width="6" Height="6"></CollapseButton>
+                                <ExpandButton Url="Content/icon/icon_dropdown.svg" Width="6" Height="6"></ExpandButton>
+                            </Images>
+                        </dx:ASPxTreeView>
+                        <hr id="foldHr" />
+                        <dx:ASPxButton runat="server" ID="ExpandBtn" Width="50" Height="20" ClientInstanceName="ExpandBtn" ClientSideEvents-Click="expandBtnClick" AutoPostBack="false" RenderMode="Button" CssClass="foldBtn"></dx:ASPxButton>
+                    </dx:PanelContent>
+                </PanelCollection>
+                <ClientSideEvents Init="leftPanelInit" />
+            </dx:ASPxPanel>
+
+            <%--페이지 툴바--%>
+            <dx:ASPxPanel runat="server" ID="PageToolbarPanel" ClientInstanceName="pageToolbarPanel"
+                CssClass="page-toolbar-wrapper">
+                <PanelCollection>
+                    <dx:PanelContent>
+                        <asp:ContentPlaceHolder runat="server" ID="PageToolbar" />
+                    </dx:PanelContent>
+                </PanelCollection>
+            </dx:ASPxPanel>
+
+            <%--메인 콘텐츠 부분--%>
+            <div class="content" id="pageContent">
+                <asp:ContentPlaceHolder runat="server" ID="PageContent"></asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <%--우측 상단 메뉴 xml에서 불러오기--%>
+        <dx:ASPxSiteMapDataSource runat="server" ID="ApplicationMenuDataSource" SiteMapFileName="~/App_Data/ApplicationMenuDataSource.sitemap" />
+        <%--초기세팅& 페이지 리사이즈--%>
+        <dx:ASPxGlobalEvents runat="server">
+            <ClientSideEvents ControlsInitialized="onControlsInitialized" BrowserWindowResized="onBrowserWindowResized" />
+        </dx:ASPxGlobalEvents>
+    </form>
+</body>
+</html>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Nodes>
+  <TreeViewNode Text="특허 및 소프트웨어 관리" NavigateUrl="#ResponsiveWebApplication">
+    <TreeViewNode Text="특허 관리" NavigateUrl="Page/Management/patentManagement.aspx?" />
+    <TreeViewNode Text="소프트웨어 저작권 관리" NavigateUrl="~/swManagement.aspx?" />
+  </TreeViewNode>
+  <TreeViewNode Text="Content Pages" NavigateUrl="#content">
+    <TreeViewNode Text="Grid View" NavigateUrl="#grid" />
+    <TreeViewNode Text="Scheduler" NavigateUrl="#scheduler" />
+    <TreeViewNode Text="Article" NavigateUrl="#article" />
+    <TreeViewNode Text="SignIn/Register" NavigateUrl="#signin" />
+  </TreeViewNode>
+</Nodes>

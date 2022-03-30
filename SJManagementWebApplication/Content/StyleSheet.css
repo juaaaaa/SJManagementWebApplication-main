@@ -1,0 +1,1683 @@
+﻿/*mainform*/
+
+/* Layout */
+
+body {
+    font-family: Dotum;
+    font-size: 9pt;
+}
+
+    .dxgvControl_Office365, .dxeBase_Office365, .dxeEditArea_Office365, body input.dxeEditArea_Office365 {
+
+    }
+
+.popup {
+    position: absolute !important;
+    left: 160px !important;
+    top: 151px !important;
+    margin: 0;
+    /*visibility:collapse;*/
+}
+
+#pageContent {
+    margin-top: -9px;
+}
+/************************
+    //*> User Form
+************************/
+/*------------------------------------------------------------공통*/
+.dCaption a { /*페이지이동 링크*/
+    color: deepskyblue;
+}
+
+.dBtnarea { /*버튼 부*/
+    margin-top: 30px;
+    width: 100%;
+}
+
+/*------------------------------------------------------------가입 폼*/
+.bdSign { /*가입 배경*/
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+    .bdSign::before {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0,0,0,.7);
+    }
+
+.fmSign { /*가입 폼*/
+    position: relative;
+    padding-top: 100px;
+    z-index: 2;
+}
+
+    .fmSign label {
+        font-size: 15px;
+        color: aliceblue;
+        margin-bottom: 30px;
+    }
+
+.dSignarea { /*가입 폼 입력부*/
+    width: 400px;
+    position: relative;
+    margin-top: 0px;
+    border: none;
+    background: transparent;
+    margin-bottom: 10px;
+}
+
+    .dSignarea::after first-child {
+        margin-top: 0;
+    }
+
+    .dSignarea input {
+        width: 100%;
+        padding: 20px 10px 10px;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #999;
+        font-size: 18px;
+        color: #fff;
+        outline: none;
+    }
+
+    .dSignarea label {
+        position: absolute;
+        left: 10px;
+        top: 15px;
+        font-size: 18px;
+        color: #999;
+        transition: all .5s ease;
+    }
+
+/*------------------------------------------------------------로그인 폼*/
+.bdLogin { /*로그인 배경*/
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+}
+
+    .bdLogin::before {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0,0,0,.4);
+    }
+
+.dLogin-logo { /*회사 로고 div*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.imgSjtech { /*회사 로고*/
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 5%;
+}
+
+.lbLogintitle { /*로그인 타이틀*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    font-size: 35px;
+    font: bold;
+    margin-bottom: 2%;
+}
+
+.fmLogin { /*로그인 폼*/
+    position: relative;
+    padding-top: 10%;
+    z-index: 2;
+    width: 85%;
+    max-width: 600px;
+}
+
+    .fmLogin label {
+        font-size: 15px;
+        color: aliceblue;
+        margin-bottom: 30px;
+    }
+
+.dLogin-videoback { /*로그인 비디오 배경*/
+    z-index: -100;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    -webkit-filter: blur(20px);
+    -moz-filter: blur(20px);
+    -o-filter: blur(20px);
+    -ms-filter: blur(20px);
+    filter: blur(20px);
+}
+
+.vidLogin { /*로그인 비디오*/
+    width: 150%;
+    height: 150%;
+    margin-left: -25%;
+    margin-top: -20%;
+}
+
+.dLoginarea { /*로그인 입력부*/
+    width: 100%;
+    position: relative;
+    margin-top: 0px;
+}
+
+    .dLoginarea::after first-child {
+        margin-top: 0;
+    }
+
+    .dLoginarea input {
+        width: 100%;
+        padding: 10px 10px 10px;
+        border: none;
+        font-size: 18px;
+        color: #fff;
+        outline: none;
+        margin-bottom: 10px;
+        border-radius: 15px;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+.btnLogin { /*로그인 버튼*/
+    border-radius: 12px;
+}
+
+
+
+
+/************************
+    //*> Manage Form
+************************/
+
+/*------------------------------------------------------------메인 폼*/
+.h1Maintitle { /*타이틀*/
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 1.42;
+    margin-bottom: 0px;
+    margin-left: 13px;
+    margin-top: 13px;
+    text-align: left;
+    width: auto;
+    float: left;
+}
+
+.hrTitle { /*구분선*/
+    width: 100%;
+    display: block;
+    color: black;
+    margin-bottom: 7px;
+    margin-top: 0px;
+}
+
+#PageContent_upUpdatePanel1 {
+    padding: 0px !important;
+    width: 868px;
+}
+
+.dHeadermenu {
+    width: 870px;
+    height: 40px;
+}
+
+.dBtnline {
+    height: 10px;
+    width: 9px;
+    border-left: 1px solid #B3B3B3;
+    float: right;
+    margin-top: 15px;
+}
+
+.dDataalert { /*데이터 변경시 오버레이 알림*/
+    background-color: black;
+    visibility: hidden;
+    opacity: 0.4;
+    position: fixed;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    top: 25%;
+    left: 50%;
+    z-index: 9999;
+}
+
+.dDataalert_save { /*데이터 변경시 오버레이 알림_save*/
+    background-color: black;
+    visibility: hidden;
+    opacity: 0.4;
+    position: fixed;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    top: 25%;
+    left: 50%;
+    z-index: 9999;
+}
+
+.dDataalert_delete { /*데이터 변경시 오버레이 알림_delete*/
+    background-color: black;
+    visibility: hidden;
+    opacity: 0.4;
+    position: fixed;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    top: 25%;
+    left: 50%;
+    z-index: 9999;
+}
+
+.spDataalerticon { /*알림 아이콘*/
+    display: flex;
+    margin-top: 10%;
+    color: white;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.lbAlerttext { /*알림 텍스트*/
+    display: flex;
+    margin-top: 5%;
+    color: white;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.dCstojs { /*C#->JS div*/
+    position: fixed;
+    top: -500px;
+    left: -500px;
+    z-index: 100;
+}
+/*------------------------------------------------------------그리드 뷰*/
+.dxgvCSD {
+}
+
+#PageContent_upUpdatePanel3 {
+    padding-right: 30px;
+    width: 868px;
+    display: block !important;
+}
+
+#PageContent_upUpdatePanel3, #InputBox {
+    display: inline-block;
+}
+
+.dxgvFocusedRow_Office365 td.dxgv {
+    border: none !important;
+    z-index: 999;
+    font-weight: bold;
+}
+
+tr.dxgvFocusedRow_Office365 {
+    /*border: 1px solid #4794BF !important;*/
+}
+
+.dGridviewLayout { /*그리드뷰 부분 레이아웃*/
+    height: auto;
+    width: 100%;
+}
+
+#PageContent_gdPatentManageInput tbody tr td {
+    vertical-align: top;
+}
+
+.dLbSearchFilterText {
+    max-height: 40px;
+    max-width: 775px;
+    width: auto;
+    float: right;
+}
+
+#PageContent_filterSmryManagement {
+    min-width: 170px;
+}
+
+#PageContent_filteredTextMain {
+    vertical-align: middle;
+    line-height: 40px;
+}
+
+#filteredTextdiv {
+    max-width: 520px;
+    vertical-align: middle;
+    max-height: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.gdGridview {
+    float: left;
+    width: 868px;
+    background-color: #eff1f9;
+}
+
+    .gdGridview:focus {
+        outline: none;
+    }
+
+    .gdGridview .dxgvCSD,
+    .gdGridview .pager {
+        border-left: none;
+        border-right: none;
+    }
+
+    /*.gdGridview .dxgvLVR > td.dxgv {
+    }*/
+
+    .gdGridview .votes-column {
+        display: inline-block;
+        min-width: 1em;
+        min-height: 1em;
+        font-size: 9pt;
+        line-height: .99;
+        border-radius: 2em;
+        background-color: rgba(0, 0, 0, 0.1);
+        padding: 3px 5px 2px;
+        text-align: center;
+    }
+
+    .gdGridview .status-column {
+        display: inline-block;
+        min-width: 1em;
+        min-height: 1em;
+        font-size: 9pt;
+        text-transform: uppercase;
+        line-height: .99;
+        border-radius: 3px;
+        border: solid 1px #ccc;
+        padding: 2px 5px;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.02);
+    }
+
+    .gdGridview .focused .status-column {
+        border: solid 1px #60a4c8;
+    }
+
+    .gdGridview .status-column.active {
+        font-weight: bold;
+    }
+
+        .gdGridview .status-column.active::after {
+            content: "active";
+        }
+
+    .gdGridview .status-column.closed::after {
+        content: "closed";
+    }
+
+    .gdGridview .column-image {
+        width: 12px;
+        height: 12px;
+    }
+
+    .gdGridview .priority1 {
+        background-image: url('icon/priority1.svg');
+    }
+
+    .gdGridview .priority2 {
+        background-image: url('icon/priority2.svg');
+    }
+
+    .gdGridview .priority3 {
+        background-image: url('icon/priority3.svg');
+    }
+
+    .gdGridview .focused .priority1 {
+        background-image: url('icon/priority1-white.svg');
+    }
+
+    .gdGridview .focused .priority2 {
+        background-image: url('icon/priority2-white.svg');
+    }
+
+    .gdGridview .focused .priority3 {
+        background-image: url('icon/priority3-white.svg');
+    }
+
+    .gdGridview .kind1 {
+        background-image: url('icon/kind1.svg');
+    }
+
+    .gdGridview .kind2 {
+        background-image: url('icon/kind2.svg');
+    }
+
+    .gdGridview .focused .kind1 {
+        background-image: url('icon/kind1-white.svg');
+    }
+
+    .gdGridview .focused .kind2 {
+        background-image: url('icon/kind2-white.svg');
+    }
+
+.dxgvPagerBottomPanel_Office365 {
+    text-align: center;
+}
+
+.dxpLite_Office365 .dxp-button:not(.dxp-disabledButton):hover {
+    background-color: white;
+}
+
+.dxgvTable_Office365 {
+    border-collapse: collapse !important;
+}
+
+.dxgvDataRow_Office365 dxgvLVR dxgvFocusedRow_Office365 td.dxgv {
+    border-collapse: collapse !important;
+}
+
+    .dxgvDataRow_Office365 dxgvLVR dxgvFocusedRow_Office365 td.dxgv:first-child {
+        border-left: 5px solid red;
+    }
+
+    .dxgvDataRow_Office365 dxgvLVR dxgvFocusedRow_Office365 td.dxgv:last-child {
+        border-right: 5px solid red;
+        border-right-width: 5px !important;
+    }
+
+.dPagernum {
+    display: inline-block;
+    position: relative;
+    top: -30px;
+    left: 0px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+#PageContent_spPagecount {
+    vertical-align: super;
+    margin-top: 4px;
+    white-space: nowrap;
+    display: inline-block;
+    font-size: 9pt;
+    width: auto;
+    height: 11px;
+}
+
+#aSubmitpager, #aSubmitpager2 {
+    vertical-align: inherit;
+    margin-top: -10px;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+}
+
+#aSubmitpager2 {
+    vertical-align: sub !important;
+}
+
+#PageContent_lbFilterSummary, #PageContent_SmryManagement {
+    text-align-last: right;
+    vertical-align: middle;
+    line-height: 40px;
+}
+
+#PageContent_lbFilterSummary {
+    float: right;
+}
+
+#dGridHeader {
+    /*display: inline-block;*/
+    left: 0px;
+    width: 868px;
+    height: 40px;
+}
+
+.btnFilterCancel {
+    vertical-align: top;
+    width: 70px !important;
+    height: 20px;
+    margin-top: 7px;
+    display: inline-block;
+    float: left;
+    background-size: cover;
+    vertical-align: middle;
+    line-height: 40px;
+}
+
+#btnFilterCancel2 {
+    margin-top: 7px !important;
+}
+
+.tbInput:focus {
+    border: 1px solid #60a4c8;
+}
+
+input#file-upload-button {
+    display: inline-block;
+    padding: .5em .75em;
+    color: #999;
+    font-size: 9pt;
+    line-height: normal;
+    vertical-align: middle;
+    background-color: #fdfdfd;
+    cursor: pointer;
+    border: 1px solid #ebebeb;
+    border-bottom-color: #e2e2e2;
+    border-radius: .25em;
+}
+
+#PageContent_gdPatentManageInput_DXPagerTop {
+    width: auto;
+}
+
+b.dxp-lead dxp-summary {
+    float: right;
+}
+
+.dxp-button dxp-bi, dxp-button dxp-bi dxp-disabledButton {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+/*------------------------------------------------------------버튼 폼*/
+#dInputBox { /*버튼폼& 입력폼 묶어줌*/
+    vertical-align: top;
+    text-align: left;
+    width: 900px;
+}
+
+.dButtonForm { /*버튼폼*/
+    display: inline-block;
+}
+
+.lbButtonicon { /*버튼 아이콘+텍스트*/
+    /*display: inline-block;*/
+    margin-right: 2px;
+    float: right;
+    height: 25.3px;
+    padding-right: 1px;
+    margin-top: 7px;
+    padding-bottom: 1px;
+}
+
+#lbExcelicon, #lbWordicon, #lbPdficon, #slbPdficon, #slbExcelicon {
+    margin-right: 18px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#lbPdficon {
+    margin-right: 9px;
+}
+
+#slbPdficon {
+    margin-right: 6px !important;
+    margin-top: 10px !important;
+    border: none !important;
+    cursor: pointer !important;
+}
+
+.dxbButton_Office365 div.dxb {
+    padding: 0px !important;
+}
+
+#upUpdatePanel1 {
+    height: 31px;
+    margin-top: 8px;
+    display: inline-block;
+}
+/*------------------------------------------------------------입력 폼*/
+.dInputForm1 { /*입력폼 사이즈*/
+    width: 852px;
+    height: 94px;
+    background-color: rgba(242,242,242,1);
+    border-bottom: 1px solid rgba(196,196,196,1);
+    padding: 8px 1px 8px 15px;
+    vertical-align: top;
+}
+
+.dInputForm2 { /*입력폼 배경*/
+    height: auto;
+    margin-top: 0px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px 1px lightgray;
+    margin-left: 10px;
+    vertical-align: top;
+}
+
+.dInputForm3 { /*입력폼 컬럼별 div*/
+    width: 100%;
+    height: 21px;
+    margin-top: 3px;
+    display: block;
+    font-size: 9pt;
+    vertical-align: middle;
+    line-height: 21px;
+}
+
+#dInputline1 {
+    display: inline-block;
+    margin-top: -2px;
+}
+
+#dInputline2 {
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: top;
+    margin-top: -2px;
+}
+
+#InputBox {
+    margin-top: 15px;
+    display: block;
+}
+
+.dxeTextBox_Office365 td.dxic, .dxeButtonEdit_Office365 td.dxic {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    height: 15px;
+    width: 193.2px !important;
+}
+
+
+#lbPdfLab {
+    width: 70px;
+    margin-right: 0px;
+}
+
+.btnstCombobox {
+    margin-right: -1px;
+    margin-top: -1px;
+}
+
+.dxeListBoxItem_Office365 {
+    font-size: 12px;
+}
+
+.lbColumn { /*입력폼 컬럼 텍스트*/
+    width: auto;
+    height: auto;
+    margin-right: 15px;
+    display: inline-block;
+    text-align: left;
+    margin-bottom: 2px;
+}
+
+.tbInput { /*위치명 css*/
+    float: right;
+    display: inline-block;
+    width: 200px;
+    height: 21px;
+    font-size: 9pt;
+    border: 1px solid #b3b3b3;
+}
+
+#fuFileUpload1 {
+    display: none;
+}
+
+.dFileUpload {
+    width: 198px;
+    height: 19px;
+    border: 1px solid #B3B3B3;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    vertical-align: top;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+    .dFileUpload label {
+        padding: 5px 55px;
+    }
+
+        .dFileUpload label i {
+            vertical-align: sub;
+            width: 15px;
+            height: 15px;
+            margin-right: 3px;
+            background-image: url('/Content/icon/icon_upload.svg');
+            text-decoration: none;
+            display: inline-block;
+            background-size: cover;
+        }
+
+td.dxeButton dxeButtonEditButton_Office365 {
+    height: 20px;
+}
+
+.btnAdd {
+    width: 203px;
+    height: 25px;
+    color: white;
+    float: right;
+    margin-top: 5px;
+    font-size: 9pt;
+    background-color: #0071bc;
+    vertical-align: bottom;
+}
+/*------------------------------------------------------------파일리스트*/
+#dFilelistplace {
+    display: inline-block;
+    width: 270px;
+    vertical-align: top;
+    margin-left: 10px;
+    margin-top: 1px;
+}
+
+.dFilelistout { /*파일리스트 자리*/
+    width: 270px;
+    height: 93px;
+    overflow-x: hidden;
+    background-color: white;
+    box-shadow: rgba(0,0,0,0.4) 10px 10px inset;
+}
+
+#dFilelist { /*파일리스트 배경*/
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    overflow-x: hidden;
+    background-color: white;
+}
+
+    #dFilelist ul#ulSlider { /*파일리스트 슬라이드*/
+        width: auto;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        float: left;
+        display: flex;
+        margin: 0px;
+        padding: 0px;
+    }
+
+        #dFilelist ul#ulSlider div { /*파일리스트 슬라이드 내부(동적)div*/
+            float: left;
+            position: relative;
+            height: 150px;
+        }
+
+.divNofiletext {
+    width: 270px;
+}
+
+.dBtns { /*전후 버튼*/
+    position: relative;
+    width: 35px;
+    height: 35px;
+    top: 29px;
+    text-align: center;
+    cursor: pointer;
+    background: rgba(0,0,0,0);
+    z-index: 100;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select: none;
+    -webkit-transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
+    -o-transition: all 0.1s ease;
+    -ms-transition: all 0.1s ease;
+    transition: all 0.1s ease;
+    vertical-align: middle;
+}
+
+#dNext { /*후 버튼*/
+    right: -50px;
+    float: right;
+    right: 0px;
+    background-image: url('/Content/icon/icon_expand_circle_right_blue.svg');
+    vertical-align: middle;
+    background-size: cover;
+}
+
+#dPrevious { /*전 버튼*/
+    left: -50px;
+    float: left;
+    left: 0px;
+    background-image: url('/Content/icon/icon_expand_circle_left_blue.svg');
+    vertical-align: middle;
+    background-size: cover;
+}
+
+#dCounter { /*페이지 카운터(숫자)*/
+    top: 0px;
+    font-weight: 700;
+    right: 35px;
+    width: auto;
+    position: absolute;
+    font-size: 18px;
+}
+
+dFilelist.active #next {
+    right: 0px;
+}
+
+#dFilelist.active #previous {
+    left: 0px;
+}
+
+.dPaginationwrap { /*페이지 카운터(하단)*/
+    bottom: 0px;
+    min-width: 20px;
+    max-width: 100%;
+    margin-top: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 11px;
+    position: relative;
+    text-align: center;
+}
+
+#dPaginationwrap ul {
+    width: 100%;
+    height: 11px;
+    margin: 0;
+    padding: 0px;
+}
+
+    #dPaginationwrap ul li {
+        margin: 0 4px;
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: #fff;
+        opacity: 0.5;
+        position: relative;
+        top: -7px;
+        background-color: gray;
+    }
+
+        #dPaginationwrap ul li.active {
+            width: 8px;
+            height: 8px;
+            top: -6px;
+            opacity: 1;
+            box-shadow: rgba(0,0,0,0.1) 1px 1px 0px;
+            background-color: #0071bc;
+        }
+
+    #ulSlider, #dPaginationwrap ul li { /*슬라이딩 애니메이션*/
+        -webkit-transition: all 0.3s cubic-bezier(1,.01,.32,1);
+        -moz-transition: all 0.3s cubic-bezier(1,.01,.32,1);
+        -o-transition: all 0.3s cubic-bezier(1,.01,.32,1);
+        -ms-transition: all 0.3s cubic-bezier(1,.01,.32,1);
+        transition: all 0.3s cubic-bezier(1,.01,.32,1);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*header*/
+
+
+/* Header 부분 */
+
+
+@font-face {
+    font-family: 'extrabold';
+    src: url('font/Pretendard-ExtraBold.otf') format('woff');
+}
+
+@font-face {
+    font-family: 'regular';
+    src: url('font/Pretendard-Regular.otf') format('woff');
+}
+
+.content-wrapper {
+    position: relative;
+    padding-bottom: 40px; /* Footer Height */
+    min-height: calc(100% - 3.13rem); /* 3.13rem is the Header size */
+}
+
+.app-header { /*header의 크기는 root.master 에서 height 직접 변경*/
+    padding: 0 !important;
+    border-bottom-width: 0 !important;
+}
+
+    .app-header .left-block {
+        float: left;
+    }
+
+    .app-header .right-block {
+        float: right;
+        margin-right: 30px;
+    }
+
+.header-menu {
+    height: 100px;
+    background-color: white !important;
+    border: none !important; /*가장자리 선 없앰*/
+}
+
+    .header-menu .image-item {
+        vertical-align: middle !important;
+    }
+
+    .header-menu .vertically-aligned {
+        font-size: 0;
+    }
+/*좌측 상단 회사 로고*/
+.header-logo {
+    background: url('icon/main_logo.svg') no-repeat center;
+    height: 64.7px;
+    width: 60.4px;
+}
+
+.app-header .left-block .header-menu .image-item > .dxm-content {
+    padding: 0 8px 0 8px;
+}
+
+.app-header .left-block .header-menu .item.toggle-item > .dxm-content {
+    padding: 0 14px 0 14px;
+}
+/* Main Menu 관련 (좌측 상단 메뉴, 회사로고 부분, 유저 부분)*/
+.app-header {
+    height: 175px;
+    white-space: nowrap;
+}
+
+    .app-header .sub-menu {
+        background-color: #005B99;
+        height: 35px;
+        padding-left: 250px;
+        font-size: 9pt;
+        color: white;
+        margin: 0;
+        border: none;
+    }
+
+    .app-header .main-menu {
+        background-color: #0071BC !important;
+        padding-left: 250px;
+        height: 40px;
+        font-size: 9pt;
+        color: white;
+        margin: 0;
+        border: none;
+    }
+
+        .app-header .main-menu :hover {
+            color: white;
+        }
+
+.dxmLite_Office365 .dxm-horizontal .dxm-image-l .dxm-content {
+    padding: 5px 16px;
+}
+
+.app-header .sub-menu :hover {
+    color: white;
+}
+
+.headerLogo {
+    font-family: extrabold !important;
+    font-size: 36px;
+    color: #0071BC;
+    width: auto;
+    height: 40px;
+    margin-right: 0;
+}
+
+.headerLogo2 {
+    font-family: regular !important;
+    font-size: 13px;
+    color: #B3B3B3;
+    width: auto;
+    height: 40px;
+}
+
+.headerLogo3 {
+    font-family: regular !important;
+    font-size: 36px;
+    color: black;
+    width: auto;
+    height: 40px;
+}
+
+@media (max-width: 1040px) {
+    #headerText {
+        display: none;
+    }
+}
+
+@media (max-width: 599px) {
+    .menu-container .dxm-ltr > div:not(.header-menu) {
+        width: 100% !important;
+    }
+}
+/* Left Panel 좌측 메뉴 */
+.left-panel {
+    border: none;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+    font-size: 9pt;
+}
+
+.dxpnl-scc {
+    overflow: hidden !important;
+    overflow-y: auto !important;
+}
+
+.leftpanel-section {
+    border: none !important;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.section-dCaption {
+    height: 2.69rem;
+    line-height: 2.69rem;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.hoverNode {
+    color: #4794BF;
+}
+
+.node {
+    font-size: 9pt;
+    height: 30px;
+    border-width: 0 !important;
+    padding: 10px !important;
+}
+
+    .node li {
+        display: list-item !important;
+        list-style: circle !important;
+    }
+
+.nodet {
+    width: 200px;
+    height: 28px;
+    background-color: white;
+    border-top-left-radius: 30px !important;
+    border-bottom-left-radius: 30px !important;
+    margin-top: 20px;
+    background-color: white !important;
+    color: #4794BF;
+}
+
+    .nodet > span {
+        padding-bottom: 0px !important;
+    }
+
+.dxtv-control ul > li {
+    margin-top: 5px !important;
+    /*list-style: outside;*/
+    padding: 0 !important;
+    /*list-style-image: url("icon/icon_dot.svg");*/
+    color: black;
+}
+
+.defaultNode {
+    list-style-image: url("icon/icon_dot.svg");
+}
+
+.change {
+    list-style-image: url("icon/icon_check_mark.png");
+}
+
+.dxtv-nd node {
+    vertical-align: top !important;
+}
+
+.dxtvControl_Office365 a {
+    color: black !important;
+}
+
+.dxtvControl_Office365 .dxtv-nd {
+    float: none !important;
+}
+
+.dxtvControl_Office365 .dxtv-btn {
+    margin-left: 10px !important;
+    margin-top: 10px !important;
+}
+/*.dxtv-ndTxt dx-vam {
+    margin-bottom: 2px;
+    padding: 0 !important;
+}*/
+
+.dxtv-ndTxt {
+    padding: 0 !important;
+    vertical-align: text-top !important;
+    margin-top: -2px !important;
+}
+
+
+.dxtvControl_Office365 li {
+    overflow-y: visible !important;
+}
+
+.selectedNode {
+    color: #4794BF !important;
+    background-color: #f2f2f2 !important;
+}
+
+    .selectedNode li {
+        background-image: url("icon/icon_check_mark.png");
+    }
+
+.dxtv-control ul > li > .dxtv-elbNoLn {
+    background-color: white !important;
+    border-top-right-radius: 30px !important;
+    border-bottom-right-radius: 30px !important;
+    height: 28px !important;
+    float: right !important;
+}
+
+.dxtv-control ul > li {
+    margin: 0;
+    margin-top: 5px;
+}
+
+    .dxtv-control ul > li > div.node {
+        margin: 0;
+        padding-top: 20px;
+    }
+
+    .dxtv-control ul > li > ul > li > div.node {
+        margin: 0;
+        background-color: none;
+    }
+
+    .dxtv-control ul > li ul > li {
+        margin-left: 0;
+        margin: 0;
+        margin-top: 1px;
+    }
+
+        .dxtv-control ul > li ul > li .dxtv-elbNoLn {
+            display: none;
+            margin: 0;
+        }
+
+.foldBtn {
+    border-bottom-left-radius: 7.5px;
+    border-bottom-right-radius: 7.5px;
+    margin-top: 0;
+    padding: 0;
+    margin-left: 80px;
+    background-image: url("icon/button_sidebar_unfold.svg") !important;
+    background-repeat: no-repeat;
+    background-color: white !important;
+}
+
+.foldBtn_check {
+    border-bottom-left-radius: 7.5px;
+    border-bottom-right-radius: 7.5px;
+    margin-top: 0;
+    padding: 0;
+    margin-left: 80px;
+    background-image: url("icon/button_sidebar_fold.svg") !important;
+    background-repeat: no-repeat;
+    background-color: white !important;
+}
+
+#foldHr {
+    width: 220px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 0;
+}
+
+.app-header .left-block .header-menu .image-item > .dxm-content {
+    padding: 0 8px 0 8px;
+}
+
+.app-header .right-block .header-menu .image-item > .dxm-content {
+    padding: 0 7px 0 7px;
+}
+
+.app-header .left-block .header-menu .item.toggle-item > .dxm-content {
+    padding: 0 14px 0 14px;
+}
+
+.app-header .right-block .header-menu .item.toggle-item > .dxm-content {
+    padding: 0 14px 0 14px;
+}
+
+.header-menu .image-item {
+    vertical-align: middle !important;
+}
+
+.header-menu .vertically-aligned {
+    font-size: 0;
+}
+
+.dialog {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    background-image: url("icon/Spinner-1s-81px.svg");
+    background-repeat: no-repeat;
+}
+
+.loading-box {
+    width: 450px;
+    height: 80px;
+    display: none;
+    position: absolute;
+    background-color: white;
+    z-index: 13000 !important;
+    top: 300px;
+    left: 450px;
+}
+
+#thick {
+    border-width: 1px 1px 1px 5px;
+    border-style: solid;
+    border-color: #0071BC
+}
+
+.img-text {
+    padding-left: 15px;
+}
+
+.img {
+    display: inline-block;
+    margin-top: 10px;
+    width: 20px;
+    height: 20px;
+    background: url('icon/main_logo.svg') no-repeat center;
+    vertical-align: top;
+}
+
+.popupLogo {
+    display: inline-block !important;
+    margin-top: 5px;
+    width: 25px;
+    height: 25px;
+    background: url('icon/main_logo.svg') no-repeat center;
+}
+
+.popupBtn {
+    display: inline-block !important;
+    float: left !important;
+    margin: 0 !important;
+    margin-right: 10px !important;
+    background-color: #0071BC;
+    border-radius: 0 !important;
+    height: 25px;
+    width: 20px;
+}
+
+.popupheader {
+    height: 40px;
+}
+
+.popupText {
+    font-family: Dotum !important;
+    font-size: 12px !important;
+    padding-top: 10px !important;
+    margin-top: 15px !important;
+    display: inline-block !important;
+    margin-left: 10px;
+}
+
+.text {
+    display: inline-block;
+    font-family: 돋움;
+    font-size: 9pt;
+    margin-top: 15px;
+    margin-left: 5px;
+    vertical-align: top;
+}
+
+.backPopup {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 140px;
+    left: 250px;
+    z-index: 12900;
+    display: none;
+}
+
+.okBtn {
+    background-color: #F9501C;
+    border: 1px solid #B3B3B3;
+    color: white;
+}
+
+.cancelBtn {
+    background-color: white;
+    border: 1px solid #B3B3B3;
+    color: black;
+}
+
+.popup {
+    border-width: 2px 2px 2px 6px !important;
+    border-style: solid !important;
+    border-color: #0071BC !important;
+    border-spacing: 0 !important;
+}
+
+.header {
+    width: 30px !important;
+    height: 30px !important;
+}
+
+.menuBtn {
+    display: inline-block !important;
+    position: absolute !important;
+    left: 0px;
+    top: 100px;
+    width: 37px !important;
+    height: 37px !important;
+    background-color: #005B99;
+    border: none !important;
+    /*background-image: url("icon/button_hambuger_deepblue.svg") !important;
+    background-repeat: no-repeat;*/
+}
+
+.menuBtn_collapse {
+    display: inline-block !important;
+    position: absolute !important;
+    left: 0px;
+    top: 100px;
+    width: 37px !important;
+    height: 37px !important;
+    background-image: url("icon/button_hambuger_clear.svg") !important;
+    background-color: #0071BC;
+    background-repeat: no-repeat;
+}
+
+.dxbButton_Office365 div.dxbf {
+    border: none !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*gd*/
+
+
+
+/*gdManagement CSS 설정*/
+
+/*그리드뷰 Header 설정*/
+.dxgvHeader_Office365 {
+    cursor: pointer;
+    text-align: center;
+    font-family: Dotum;
+    font-size: 9pt;
+}
+/* 그리드뷰 설정*/
+.dxgvControl_Office365, .dxeBase_Office365, .dxeEditArea_Office365,
+body input.dxeEditArea_Office365, .dxpLite_Office365 {
+    /*color: #000;*/
+    font-family: Dotum !important;
+    /*font-size: 9pt !important;*/
+}
+/*GridVIew Header 생략*/ po
+.dxpLite_Office365 .dxp-ellip {
+    padding: 9px 1px 9px !important;
+}
+
+/*TextBox*/
+.dTextline .dxeBase_Office365 {
+    border-left: 1px solid #B3B3B3;
+}
+/*Header Button*/
+.dxeBase_Office365 {
+    margin: 0 2.5px;
+}
+/*버튼 아이콘+텍스트*/
+.slbButtonicon {
+    /*display: inline-block;*/
+    margin-right: 11.5px;
+    float: right;
+    height: 25px;
+    background-size: cover;
+    margin-top: 10px;
+    border-bottom: 1px solid #b3b3b3;
+}
+/*Search Filter Text - MainForm (dSearchFilterText) 변경*/
+.dLbSearchFilterText {
+    /*position: absolute !important;
+    float: right !important;
+    margin: 0 !important;
+    left: 260px !important;
+    top: 60px !important;
+    width: 610px !important;*/
+    text-align-last: right !important;
+}
+/*Filter Summary Setting*/
+#PageContent_filterSmryManagement {
+    float: unset !important;
+    text-align-last: right;
+    vertical-align: middle;
+    line-height: 40px;
+}
+/*전체보기 버튼 - Filter 초기화*/
+#btnFilterCancel2 {
+    align-content: center;
+}
+
+/*Popup 설정*/
+#PageContent_toolbarSearchPopup_PW-1 {
+    width: 600px !important;
+    max-width: 600px !important;
+    height: 110px !important;
+    max-height: 110px !important;
+    border-spacing: 0 !important;
+    font-family: Dotum !important;
+    font-size: 9pt !important;
+    color: black !important;
+    left: 133px !important;
+    top: 30px !important;
+    border: 2px solid #0071BC !important;
+}
+/*Popup 배경 설정*/
+.dxpcModalBackLite_Office365,
+.dxdpModalBackLite_Office365 {
+    opacity: 0;
+    position: sticky;
+}
+/*Popup Caption*/
+.dxflFormLayout_Office365, .dxeButtonEdit_Office365 {
+    font-family: Dotum;
+    font-size: 9pt;
+}
+/*Popup Search Button*/
+.dxpcLite_Office365 .dxpc-content,
+.dxdpLite_Office365 .dxpc-content {
+    padding: 0 0 0 0;
+    border: 0 none;
+}
+
+/*Pager Setting*/
+.dxpLite_Office365 {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    margin-right: 0 !important;
+    /*float:right;*/
+}
+/*Pager Summary Setting*/
+.dxp-summary {
+    padding-right: 0 !important;
+    margin-right: 0 !important;
+}
+/*Pager Wrap*/
+.dxgvPagerTopPanel_Office365, .dxgvControl_Office365 .dxpLite_Office365 {
+    /*width: 300px !important;*/
+    padding-top: 0;
+    justify-content: space-around !important;
+}
+
+.dxp-num, .dxp-current {
+    display: block !important;
+    justify-content: space-around !important;
+}
+/*하단 입력한 페이지로 이동하는 Pager*/
+.dPagernumFil {
+    display: inline-block;
+    position: relative;
+    top: -27px;
+    left: 12px;
+    font-family: Dotum;
+    font-size: 9pt;
+}
+/*Popup CSS */
+.dxeTextBoxDefaultWidthSys {
+    width: 200px;
+    height: 21px;
+    padding: 0;
+    margin: 0;
+    cursor: text !important;
+}
+/*Popup TextBox(Edit)*/
+input[type="text"].dxeEditArea_Office365 {
+    cursor: text !important;
+}
+/*Popup 내부 - 사이 간격*/
+.dxflItem_Office365 {
+    padding: 3px 0 0 0;
+}
+/*Popup 내부 - 간격*/
+.dxflGroup_Office365 .dxflChildInLastRowSys.dxflGroupCell_Office365 > .dxflGroupBox_Office365,
+.dxflGroup_Office365 .dxflChildInLastRowSys.dxflGroupCell_Office365 > .dxflGroupBox_Office365,
+.dxflGroupBox_Office365 > table.dxflGroup_Office365:first-child,
+dxeButtonEditSys dxeButtonEdit_Office365 dxeNullText_Office365 dxh0 {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+/*Popup 종류 버튼*/
+.dxeButton .dxeButtonEditButton_Office365 .divisonBtn {
+    background-image: url(/Content/icon/icon_dropdown.svg);
+}
+/*Popup 출원일자 버튼*/
+.dxeButton .dxeButtonEditButton_Office365 .fillDate {
+    background-image: url(/Content/icon/icon_%ec%ba%98%eb%a6%b0%eb%8d%94.svg);
+}
+/*Popup 검색 버튼*/
+.dxeButtonEdit_Office365 {
+    width: 200px
+}
+/*Popup Col - 검색버튼*/
+.dxflHARSys > .dxflItemSys {
+    display: block !important;
+}
+/*Popup 검색 버튼 내부*/
+.dxflHARSys > .dxflButtonItemSys {
+    float: right !important;
+}
+/*Popup TextBox 내부*/
+.dxic {
+    margin-right: 5px;
+}
+/*Popup TextBox 외부 Caption*/
+.dxflTextEditItemSys .dxflVATSys.dxflCaptionCell_Office365 {
+    display: none !important;
+}
+/*Popup ComboBox & DateEdit 외부 Caption*/
+.dxflCustomItemSys .dxflVATSys.dxflCaptionCell_Office365 {
+    display: none !important;
+}
+/*Popup 내부 위치 설정*/
+#PageContent_toolbarSearchPopup_popupFormLayout_ip_name_ET,
+#PageContent_toolbarSearchPopup_popupFormLayout_ip_inventor_ET,
+#PageContent_toolbarSearchPopup_popupFormLayout_ip_division_ET {
+    border-collapse: unset !important;
+    float: unset;
+}
+/*Popup 내부 위치 설정 - 특허명 Caption*/
+#PageContent_toolbarSearchPopup_popupFormLayout_ip_name_CapC {
+    padding: 2px 21px 0 0 !important;
+}
+/*Popup 내부 위치 설정 - 발명자 Caption*/
+#PageContent_toolbarSearchPopup_popupFormLayout_ip_inventor_CapC {
+    padding: 2px 17px 0 0 !important;
+}
+/*Popup 내부 위치 설정 - 종류 Caption*/
+#PageContent_toolbarSearchPopup_popupFormLayout_ip_division_CapC {
+    padding: 2px 29px 0 0 !important;
+}
+/*Popup DateEdit 내부 - 날짜 끝 Caption*/
+#PageContent_toolbarSearchPopup_popupFormLayout_ip_fillDateEnd_CapC,
+#PageContent_toolbarSearchPopup_popupFormLayout_ip_regDateEnd_CapC {
+    display: none !important;
+}
+/*Popup 내부 Caption 위치 설정*/
+.dxeCaptionCell_Office365.dxeCaptionVATSys.dxeTextEditCTypeSys {
+    padding: 2px 5px 0 0 !important;
+}
+/*Popup 출원일자 분류 '~' - 외부*/
+.dxeBase_Office365 .lbFillDateDiv {
+    padding: 3px 0 0 0 !important;
+}
+/*Popup 출원일자 분류 '~' - 내부*/
+.dxeDisabled_Office365 {
+    padding: 3px 0 0 0 !important;
+    margin: 0 !important;
+    text-align: center !important;
+}
+
+.btnFilterCancel2 {
+    vertical-align: top;
+    width: 70px !important;
+    height: 20px;
+    display: inline-block;
+    float: left;
+    background-size: cover;
+    vertical-align: middle;
+    line-height: 40px;
+    margin-top: 10px !important;
+}
+/*Popup LayoutItem Settings*/
+.dxflCaptionCell_Office365 {
+    display: none;
+}
